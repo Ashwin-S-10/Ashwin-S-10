@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Ashwin</h1>
 
 <p align="center">
-  <b>Software Systems Student | Technical Lead @ FOSS-CIT | Backend & Scalable Systems Enthusiast | Full Stack Development | Driven by Passion</b>
+  <b>Software Systems Student | Technical Lead @ FOSS-CIT | Full Stack Development | Driven by Passion</b>
 </p>
 
 <p align="center">
@@ -12,7 +12,7 @@
 
 ## 🚀 About Me
 
--  I'm curious and passionate about **Solving Realworld problems with a Enginnering perspective**
+-  I'm curious and passionate about **Solving Realworld problems with a Engineering perspective**
 -  M.Sc. Software Systems at **Coimbatore Institute of Technology** (CGPA 8.66 / 10)
 -  Previously a **Software Development Intern** at Lakshmi Life Sciences
 -  Solved **520+ DSA problems** on LeetCode; winner and runner-up in multiple coding contests
