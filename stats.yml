@@ -1,0 +1,33 @@
+name: Update GitHub stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *"      # every day at 00:00 UTC
+  workflow_dispatch:          # lets you run it manually from the Actions tab
+  push:
+    branches: [main]
+    paths: ["scripts/generate_stats.py"]
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate stats card
+        run: python scripts/generate_stats.py
+        env:
+          GH_USER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-stats.svg
+          git diff --staged --quiet || git commit -m "chore: update GitHub stats"
+          git push
